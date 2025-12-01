@@ -1,8 +1,18 @@
-class Vector:
-    def __init__(self, x=0, y=0, z=0):
-        self.x = x
-        self.y = y
-        self.z = z
+from matrix import Matrix
+
+class Vector(Matrix):
+    def __init__(self, *args):
+        self.v:list = parse(args)
+        self.
+
+    def parse(self, args:list):
+        for i in args:
+            if len(i) > 0:
+                kind = "row"
+            else:
+                kind = "column"
+
+
 
     def for_each(self, f, v:Vector):        
         self.x = f(self.x, v.x)
@@ -69,7 +79,7 @@ class Vector:
         return self.rfor_each(v, self.sub)
 
     def __str__(self)
-        return f"x={x}, y={y}, z={z}"
+        return f"({x}, {y}, {z})"
 
     def __repr__(self)
         return f"x={x}, y={y}, z={z}"
